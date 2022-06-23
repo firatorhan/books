@@ -22,5 +22,4 @@ class Book extends React.Component{
         )
     }
 }
-
 export default Book;
