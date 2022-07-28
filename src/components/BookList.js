@@ -15,15 +15,16 @@ class BookList extends React.Component {
                     {contextBook => {
                     
                     const { books } = contextBook;
-                    const { isDarkTheme, dark, light } = contextTheme;
+                    const { isDarkTheme, dark, light, changeTheme } = contextTheme;
                     const theme = isDarkTheme ? dark : light;
                 
                     return (
-                        <section className="page-section" style={{background: theme.bg, color:theme.txt}} id="portfolio">
+                        <section className="page-section" style={{background: theme.bg}} id="portfolio">
                         <div className="container">
                             <div className="text-center">
-                                <h2 className="section-heading text-uppercase">BookFolio</h2>
-                                <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                                <h2 className="section-heading text-uppercase" style={{color:theme.txt}}>BookFolio</h2>
+                                <h3 className="section-subheading text-muted" style={{color:theme.subTxt}}>Lorem ipsum dolor sit amet consectetur.</h3>
+                                <button type='button' className='btn btn-sm btn-info' style={{marginTop: '-70px'}} onClick={changeTheme}> Change Theme</button>
                             </div>
                             <div className="row">
         
